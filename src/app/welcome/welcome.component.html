@@ -1,0 +1,32 @@
+<form [formGroup]="login">
+    <input type="text" id="name" placeholder="enter name" formControlName="name">
+    <div *ngIf="login.get('name')?.hasError('required') && login.get('name')?.touched">name is required</div>
+    <input type="email" id="email" placeholder="enter email" formControlName="email">
+    <div *ngIf="login.get('email')?.hasError('required') && login.get('email')?.touched">email is required</div>
+    <input type="password" id="password" placeholder="enter name" formControlName="password">
+    <div *ngIf="login.get('password')?.hasError('required') && login.get('password')?.touched">password is required</div>
+    <button (click)="adduser()">insert</button>
+</form>
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>password</th>
+            <th>action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of user">
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.password}}</td>
+            <td>
+                <button class="btn btn-primary">update</button>
+                <button class="btn btn-danger">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
