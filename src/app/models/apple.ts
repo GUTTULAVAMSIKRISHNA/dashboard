@@ -2,5 +2,6 @@ export class Apple {
     id?:number;
     name!:string;
     email!:string;
-    password!:string;
+    branch!:string;
+    mobile!:bigint;
 }

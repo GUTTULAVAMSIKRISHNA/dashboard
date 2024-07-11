@@ -19,9 +19,10 @@ login!:FormGroup
   }
   Init():void{
     this.login=this.fb.group({
-      name:['',[Validators.required,Validators.maxLength(30),Validators.minLength(5)]],
+      name:['',[Validators.required,Validators.maxLength(30),Validators.minLength(2)]],
       email:['',[Validators.required,Validators.email]],
-      password:['',[Validators.required,Validators.maxLength(20),Validators.minLength(8)]],
+      branch:['',[Validators.required,Validators.maxLength(20),Validators.minLength(2)]],
+      mobile:['',[Validators.required,]],
     })
   }
   getall():void{

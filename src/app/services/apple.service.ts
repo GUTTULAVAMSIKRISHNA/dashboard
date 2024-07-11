@@ -7,7 +7,7 @@ import { Apple } from '../models/apple';
   providedIn: 'root'
 })
 export class AppleService {
-private baseurl="https://sheetdb.io/api/v1/dcdfz0e17caxb"
+private baseurl="https://localhost:8090/api/v1/insertion"
   constructor(private http:HttpClient) { }
   getall():Observable<any>{
     return this.http.get<any>(this.baseurl)

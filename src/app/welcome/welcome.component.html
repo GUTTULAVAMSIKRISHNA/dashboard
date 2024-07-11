@@ -3,8 +3,10 @@
     <div *ngIf="login.get('name')?.hasError('required') && login.get('name')?.touched">name is required</div>
     <input type="email" id="email" placeholder="enter email" formControlName="email">
     <div *ngIf="login.get('email')?.hasError('required') && login.get('email')?.touched">email is required</div>
-    <input type="password" id="password" placeholder="enter name" formControlName="password">
-    <div *ngIf="login.get('password')?.hasError('required') && login.get('password')?.touched">password is required</div>
+    <input type="text" id="branch" placeholder="enter branch" formControlName="branch">
+    <div *ngIf="login.get('branch')?.hasError('required') && login.get('branch')?.touched">branch is required</div>
+    <input type="text" id="mobile" placeholder="enter mobile" formControlName="mobile">
+    <div *ngIf="login.get('mobile')?.hasError('required') && login.get('mobile')?.touched">mobile is required</div>
     <button (click)="adduser()">insert</button>
 </form>
 <table>
@@ -13,7 +15,8 @@
             <th>id</th>
             <th>name</th>
             <th>email</th>
-            <th>password</th>
+            <th>branch</th>
+            <th>mobile</th>
             <th>action</th>
         </tr>
     </thead>
@@ -22,7 +25,8 @@
             <td>{{i.id}}</td>
             <td>{{i.name}}</td>
             <td>{{i.email}}</td>
-            <td>{{i.password}}</td>
+            <td>{{i.branch}}</td>
+            <td>{{i.mobile}}</td>
             <td>
                 <button class="btn btn-primary">update</button>
                 <button class="btn btn-danger">delete</button>
